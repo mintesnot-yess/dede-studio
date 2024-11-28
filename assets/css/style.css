@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     transition: all .4s;
+
+
 }
 
 :root {
@@ -10,6 +12,8 @@
     --secondary-color: #1e1d30;
 
 }
+
+
 
 @keyframes card-animation {
     0% {
@@ -219,20 +223,20 @@ nav {
 }
 
 .card-container {
-
     text-align: center;
     padding: 50px 20px;
-    margin: 50px auto;
+    margin: 20px auto;
     max-width: var(--max-width);
 
     h1 {
-        font-size: 2.3rem;
-        color: #1a1a1a;
-        padding: 10px;
+        font-size: 2.5rem;
+        color: #505050;
+        padding: 20px;
         animation: card-animation;
         animation-timeline: view();
         animation-range: entry 0% cover 40%;
     }
+
 
     p {
         line-height: 25px;
@@ -397,9 +401,19 @@ nav {
     }
 }
 
+
+
+
+
+
+
+
+
+
+
 .project-container {
     max-width: var(--max-width);
-    margin: 110px auto;
+    margin: 50px auto;
     padding: 20px 0;
 
     .header {
@@ -675,6 +689,8 @@ footer {
         text-align: center;
         max-width: var(--max-width);
         margin: 0 auto;
+        display: flex;
+        flex-direction: column;
 
         h1 {
             font: 400 2.1rem / 1.625rem "Open Sans", sans-serif;
@@ -688,14 +704,19 @@ footer {
 
         h2 {
             line-height: 25px;
-            max-width: 700px;
             font: 600 1.5rem / 1.625rem "Open Sans", sans-serif;
             color: #3f3f3f;
             margin: 5px 0;
         }
 
+        a {
+            line-height: 25px;
+            font: 600 1.5rem / 1.625rem "Open Sans", sans-serif;
+            color: #3f3f3f;
+            margin: 10px 0;
+        }
+
         h3 {
-            max-width: 700px;
             font: 300 1.3rem / 1.625rem "Open Sans", sans-serif;
             color: #3f3f3f;
             margin: 5px 0;
@@ -709,6 +730,11 @@ footer {
             border-radius: 20px;
 
 
+        }
+
+        p {
+            width: 80%;
+            margin: auto;
         }
     }
 }
