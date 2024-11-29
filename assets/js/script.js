@@ -32,20 +32,11 @@ function play_vid(id) {
 
 
 
-
-
 document.getElementById("contact-btn").addEventListener('click', function () {
-  document.getElementById("contact").style.borderRadius = "10px";
-  document.getElementById("contact").style.scale = "1.1";
   document.getElementById("contact").style.backdropFilter = "brightness(1.5)";
 
   setInterval(function () {
-    document.getElementById("contact").style.scale = "1";
     document.getElementById("contact").style.backdropFilter = "brightness(1)";
-
-
-
-
 
   }, 2000);
 

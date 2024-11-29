@@ -39,6 +39,7 @@ html {
     color: white;
     background-size: cover;
     scroll-behavior: smooth;
+
 }
 
 body::-webkit-scrollbar {
@@ -856,7 +857,6 @@ footer {
         width: 150px;
         height: 150px;
         object-fit: cover;
-        background: #367491;
         border-radius: 20px;
 
 
