@@ -1,7 +1,6 @@
 let NavMenu = document.querySelector(".menu");
 let barMenuBTN = document.querySelector(".bar");
 
-// if nav menu is dispaly flex do display none else display flex
 barMenuBTN.addEventListener("click", () => {
   if (NavMenu.style.display === "flex") {
     barMenuBTN.classList.remove("fa-times");
@@ -28,13 +27,26 @@ barMenuBTN.addEventListener("click", () => {
 
 function play_vid(id) {
   let vidId = document.getElementById(id);
-
-  if (vidId.play) {
-    vidId.play()
-
-  } else {
-    vidId.pause()
-
-  }
-
+  vidId.play()
 }
+
+
+
+
+
+document.getElementById("contact-btn").addEventListener('click', function () {
+  document.getElementById("contact").style.borderRadius = "10px";
+  document.getElementById("contact").style.scale = "1.1";
+  document.getElementById("contact").style.backdropFilter = "brightness(1.5)";
+
+  setInterval(function () {
+    document.getElementById("contact").style.scale = "1";
+    document.getElementById("contact").style.backdropFilter = "brightness(1)";
+
+
+
+
+
+  }, 2000);
+
+})

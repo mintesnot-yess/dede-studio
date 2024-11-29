@@ -309,7 +309,7 @@ nav {
 
     .image-cont {
         flex: 1 250px;
-        background: url('https://storage.googleapis.com/a1aa/image/GD8dhNPvn0akFlrcth2JfrGJ8VNjezuXJ5lr6RGYbh52SQ1TA.jpg') center/cover;
+        background: url('../images/image1.jpg') center/cover;
         animation: card-animation;
         animation-timeline: view();
         animation-range: entry 0% cover 40%;
@@ -595,6 +595,7 @@ footer {
     div {
         flex: 1 200px;
         text-align: center;
+
     }
 
     div h3 {
@@ -608,10 +609,18 @@ footer {
         text-wrap: nowrap;
     }
 
-    div p,
+
     div a {
         color: #b0b0b0;
         text-decoration: none;
+        font-size: 1.2rem;
+        white-space: nowrap;
+        margin: 5px 0;
+    }
+
+    div p {
+        color: #b0b0b0;
+
     }
 
     .footer div a:hover {
