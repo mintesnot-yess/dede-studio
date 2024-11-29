@@ -297,6 +297,7 @@ nav {
     font-size: 1.1rem;
     color: #696969;
     line-height: 25px;
+
 }
 
 .work-withus-container {
@@ -360,9 +361,58 @@ nav {
 
     .image {
         flex: 1;
+        position: relative;
+    }
+
+    button {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: solid 2px;
+        backdrop-filter: blur(10px);
+        background: #33333342;
+        font-size: 1.2rem;
+        cursor: pointer;
+        color: white;
+        opacity: .7;
+        scale: .8;
+
+        &:hover {
+            backdrop-filter: blur(10px) brightness(2);
+
+        }
+
+        &:active {
+            backdrop-filter: blur(10px) brightness(0.5);
+
+        }
+
+    }
+
+    &:hover {
+        button {
+            opacity: 1;
+            scale: 1;
+        }
     }
 
     .image img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        animation: card-animation;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
+    }
+
+    .image {
+        flex: 1;
+    }
+
+    .image video {
         width: 100%;
         object-fit: cover;
         border-radius: 10px;
@@ -460,8 +510,27 @@ nav {
     .project p a {
         color: #53575a;
         text-decoration: none;
-        font-weight: bold;
+        font: 550 1.2rem / 1.625rem "Open Sans", sans-serif;
     }
+
+
+
+
+}
+
+.iframe-container {
+    max-width: var(--max-width);
+    display: flex;
+    justify-content: center;
+    animation: card-animation;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+
+    iframe {
+        width: 97%;
+        border-radius: 10px;
+    }
+
 }
 
 footer {
@@ -683,61 +752,72 @@ footer {
             border-radius: 10px;
         }
     }
+}
 
-    .team-container {
+.team-container {
 
-        text-align: center;
-        max-width: var(--max-width);
-        margin: 0 auto;
+    text-align: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    .service {
+        flex: 1 300px;
+        border-radius: 10px;
+        padding: 10px;
         display: flex;
         flex-direction: column;
-
-        h1 {
-            font: 400 2.1rem / 1.625rem "Open Sans", sans-serif;
-            color: #1a1a1a;
-            animation: card-animation;
-            animation-timeline: view();
-            animation-range: entry 0% cover 40%;
-            margin: 30px auto;
-
-        }
-
-        h2 {
-            line-height: 25px;
-            font: 600 1.5rem / 1.625rem "Open Sans", sans-serif;
-            color: #3f3f3f;
-            margin: 5px 0;
-        }
-
-        a {
-            line-height: 25px;
-            font: 600 1.5rem / 1.625rem "Open Sans", sans-serif;
-            color: #3f3f3f;
-            margin: 10px 0;
-        }
-
-        h3 {
-            font: 300 1.3rem / 1.625rem "Open Sans", sans-serif;
-            color: #3f3f3f;
-            margin: 5px 0;
-        }
-
-        img {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            background: #367491;
-            border-radius: 20px;
+        align-items: center;
 
 
-        }
+    }
 
-        p {
-            width: 80%;
-            margin: auto;
-        }
+    h1 {
+        font: 400 2.1rem / 1.625rem "Open Sans", sans-serif;
+        color: #1a1a1a;
+        animation: card-animation;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
+
+    }
+
+    h2 {
+        line-height: 25px;
+        font: 600 1.5rem / 1.625rem "Open Sans", sans-serif;
+        color: #3f3f3f;
+    }
+
+    a {
+        line-height: 25px;
+        font: 600 1.3rem / 1.625rem "Open Sans", sans-serif;
+        color: #3f3f3f;
+        text-decoration: none;
+    }
+
+    h3 {
+        font: 300 1.3rem / 1.625rem "Open Sans", sans-serif;
+        color: #3f3f3f;
+    }
+
+    img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        background: #367491;
+        border-radius: 20px;
+
+
+    }
+
+    p {
+        width: 95%;
+        font: 100 1rem / 1.625rem "Open Sans", sans-serif;
+        margin: auto;
     }
 }
+
+
 
 .footer-bottom {
     text-align: center;
