@@ -9,7 +9,7 @@ barMenuBTN.addEventListener("click", () => {
     NavMenu.style.transform = "translateY(-100%)";
     NavMenu.style.opacity = "0";
 
-     
+
     setTimeout(() => {
       NavMenu.style.display = "none";
     }, 300);
@@ -22,4 +22,19 @@ barMenuBTN.addEventListener("click", () => {
     NavMenu.style.opacity = "1";
   }
 });
- 
+
+
+
+
+function play_vid(id) {
+  let vidId = document.getElementById(id);
+
+  if (vidId.play) {
+    vidId.play()
+
+  } else {
+    vidId.pause()
+
+  }
+
+}

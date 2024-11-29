@@ -101,12 +101,19 @@
           </div>
           <div class="projects">
             <div class="project">
-              <img
-                alt="A laptop with a coffee mug on a desk"
-                height="200"
-                src="assets/images/butuye.jpg"
-                width="300"
-              />
+              <div class="vid-cont">
+                <video
+                  alt="People discussing in front of a screen"
+                  height="300"
+                  src="assets/videos/butuye.mp4"
+                  muted
+                  id="pro1"
+                  poster="assets/images/butuye.jpg"
+                ></video>
+                <button onclick="play_vid('pro1')">
+                  <i class="fa-solid fa-play"></i>
+                </button>
+              </div>
               <p>
                 <a href=""> Butuye(ቡጡዬ) </a> - Butuye is a captivating 2D
                 animated kids’ show designed to educate and entertain young
@@ -115,12 +122,14 @@
               </p>
             </div>
             <div class="project">
-              <img
-                alt="A hand holding headphones on a desk"
-                height="200"
-                src="assets/images/books.jpg"
-                width="300"
-              />
+              <div class="vid-cont">
+                <img
+                  alt="A hand holding headphones on a desk"
+                  height="200"
+                  src="assets/images/books.jpg"
+                  width="300"
+                />
+              </div>
               <p>
                 <a href=""> Yetateyana Tsegur (የታቲያና ጸጉር) </a> - A space-themed
                 educational storybook where children can learn about the solar
@@ -129,20 +138,17 @@
               </p>
             </div>
             <div class="project">
-              <img
-                alt="A camera and accessories on a desk"
-                height="200"
-                src="assets/images/mender.jpg"
-                width="300"
-              />
-              <p>
-                <a href=""> Mender (መንደር) </a> - In the vibrant town of Mender,
-                the eccentric yet lovable family of Dashe and Ete, along with
-                their three kids and their witty maid Bilcha, navigate the ups
-                and downs of everyday life, turning mundane moments into
-                laugh-out-loud adventures while learning valuable lessons along
-                the way.
-              </p>
+              <div class="vid-cont">
+                <img height="200" src="assets/images/mender.jpg" width="300" />
+                <p>
+                  <a href=""> Mender (መንደር) </a> - In the vibrant town of
+                  Mender, the eccentric yet lovable family of Dashe and Ete,
+                  along with their three kids and their witty maid Bilcha,
+                  navigate the ups and downs of everyday life, turning mundane
+                  moments into laugh-out-loud adventures while learning valuable
+                  lessons along the way.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -167,10 +173,11 @@
               src="assets/videos/hero-video.mp4"
               muted
               loop
+              id="ar-vid"
               poster="https://images.unsplash.com/photo-1609921212029-bb5a28e60960?q=80&w=2052&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               width="450"
             ></video>
-            <button>
+            <button onclick="play_vid('ar-vid')">
               <i class="fa-solid fa-play"></i>
             </button>
           </div>
@@ -221,6 +228,7 @@
               src="assets/videos/hero-video.mp4"
               muted
               loop
+              id="video-play"
               poster="https://images.unsplash.com/photo-1609921212029-bb5a28e60960?q=80&w=2052&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               width="450"
             ></video>
