@@ -41,3 +41,20 @@ document.getElementById("contact-btn").addEventListener('click', function () {
   }, 2000);
 
 })
+
+
+let testimonials = document.querySelectorAll(".testimonial-card");
+let currentIndex = 0;
+
+testimonials[currentIndex].classList.add("active");
+
+function nextSlide() {
+  testimonials[currentIndex].classList.remove("active");
+
+  currentIndex = (currentIndex + 1) % testimonials.length;
+
+  testimonials[currentIndex].classList.add("active");
+}
+
+setInterval(nextSlide, 5000);
+

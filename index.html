@@ -109,13 +109,14 @@
             <h1>Our Projects</h1>
           </div>
           <div class="projects">
-            <div class="project">
+            <div class="project card-animation">
               <div class="vid-cont">
                 <video
                   alt="People discussing in front of a screen"
                   height="300"
                   src="assets/videos/butuye.mp4"
                   muted
+                  loop
                   id="pro1"
                   poster="assets/images/butuye.jpg"
                 ></video>
@@ -130,7 +131,7 @@
                 episode.
               </p>
             </div>
-            <div class="project">
+            <div class="project card-animation">
               <div class="vid-cont">
                 <img
                   alt="A hand holding headphones on a desk"
@@ -140,16 +141,17 @@
                 />
               </div>
               <p class="card-animation">
-                <a href=""> Yetateyana Tsegur (የታቲያና ጸጉር) </a> - StoryTime AR-
-                Interactive, immersive storybook app designed for children,
-                combining animated storytelling with Augmented Reality (AR)
-                technology. The app, “StoryTime AR,” will allow children to
-                engage with beloved stories in a novel, interactive way.
+                <a href=""> StoryTime AR </a> - Interactive, immersive storybook
+                app designed for children, combining animated storytelling with
+                Augmented Reality (AR) technology. The app, “StoryTime AR,” will
+                allow children to engage with beloved stories in a novel,
+                interactive way.
               </p>
             </div>
-            <div class="project">
+            <div class="project card-animation">
               <div class="vid-cont">
                 <img height="200" src="assets/images/mender.jpg" width="300" />
+              </div>
                 <p class="card-animation">
                   <a href=""> Mender (መንደር) </a> - In the vibrant town of
                   Mender, the eccentric yet lovable family of Dashe and Ete,
@@ -163,22 +165,24 @@
           </div>
         </div>
 
-        <div class="image-list-container">
+        <div class="image-list-container card-animation">
           <div class="image">
             <video
               alt="People discussing in front of a screen"
               height="300"
-              src="assets/videos/hero-video.mp4"
+              src="assets/videos/ar-vid.mp4"
               muted
               loop
               id="ar-vid"
-              poster="https://images.unsplash.com/photo-1609921212029-bb5a28e60960?q=80&w=2052&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              poster="assets/images/arcover.png"
               width="450"
+              
             ></video>
             <button onclick="play_vid('ar-vid')">
               <i class="fa-solid fa-play"></i>
             </button>
           </div>
+
           <div class="content card-animation">
             <h1>Augmented Reality Experiences</h1>
             <p>
@@ -190,7 +194,7 @@
             <!-- <a href="#"> Learn more <i class="fas fa-arrow-right"> </i> </a> -->
           </div>
         </div>
-        <div class="image-list-container">
+        <div class="image-list-container card-animation">
           <div class="image">
             <img src="assets/images/20180925_164051.jpg" alt="" />
           </div>
@@ -207,21 +211,9 @@
           </div>
         </div>
 
-        <div class="image-list-container">
-          <div class="image card-animation">
-            <video
-              alt="People discussing in front of a screen"
-              height="300"
-              src="assets/videos/hero-video.mp4"
-              muted
-              loop
-              id="video-play"
-              poster="https://images.unsplash.com/photo-1609921212029-bb5a28e60960?q=80&w=2052&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              width="450"
-            ></video>
-            <button>
-              <i class="fa-solid fa-play"></i>
-            </button>
+        <div class="image-list-container card-animation">
+          <div class="image">
+            <img src="assets/images/education.jpg" height="350px"  alt="" />
           </div>
           <div class="content card-animation">
             <h1>Custom Educational Content</h1>
@@ -249,59 +241,67 @@
           </div>
         </div>
 
-        <div class="team-container client" id="introduction">
+
+ 
+        <div class="d-center co-gray">
           <h1>Clients Testimonials</h1>
-          <div class="services">
-            <div class="service">
-              <img
+          </div>
+        <div class="testimonial-container card-animation">
+         
+          
+          <i onclick="nextSlide()" class="fas fa-chevron-left"> </i>
+          <div class="testimonial-card-cont">
+            <div class="testimonial-card">
+              <div class="testimonial-nav">
+                <img
                 src="assets/images/beminat.jpg"
                 class="card-animation"
-                alt=""
-              />
-              <br />
-
-              <a>Bemnet Yemesgen</a>
-              <p class="card-animation">
-                "Dede is a fantastic art studio to work with. They have great
-                attitude and their work is fun as well as thoughtful."
+                />
+              </div>
+              <p class="testimonial-text">
+                “Dede is a fantastic art studio to work with. They have great
+                attitude and their work is fun as well as thoughtful.”
               </p>
-              <p>Girl Effect, Brand Director</p>
+              <h1 class="testimonial-author">Bemnet Yemesgen</h1>
+              <p class="testimonial-role">Girl Effect, Brand Director</p>
             </div>
-            <div class="service">
-              <img src="assets/images/Yves.jpg" class="card-animation" alt="" />
-              <br />
-              <a>Yves de Saint Priest</a>
+            <div class="testimonial-card">
+              <div class="testimonial-nav">
+                <img src="assets/images/Yves.jpg" class="card-animation" alt="" />
 
-              <p class="card-animation">
-                "Looking to make a set of posters for farmers’ training, Dede
+              </div>
+              <p class="testimonial-text">
+                “Looking to make a set of posters for farmers’ training, Dede
                 Studio has not been only a very good graphic designer, but also
                 an advisor. The drawings realized, the design, the follow up,
                 everything was very professional. It was a fruitful
                 collaboration and the farmers’ feedbacks have been very positive
-                ! "
+                ! ”
               </p>
-              <p>Barley Expert – Boortmalt Ethiopia</p>
+              <p class="testimonial-author">Yves de Saint Priest</p>
+              <p class="testimonial-role">Barley Expert – Boortmalt Ethiopia</p>
             </div>
-            <div class="service">
-              <img
+            <div class="testimonial-card">
+              <div class="testimonial-nav">
+                <img
                 src="assets/images/Yodahe.jpg"
                 class="card-animation"
                 alt=""
               />
-              <br />
-              <a>Yodahe Zemichael</a>
-
-              <p>
-                "We have had the pleasure of working with Dede studios on a
+              </div>
+              <p class="testimonial-text">
+                “We have had the pleasure of working with Dede studios on a
                 couple of projects. We had hard deadlines and through their
                 day-and-night dedicated approach, we were able to receive a
-                first-class work from Ded"
+                first-class work from Ded”
               </p>
-              <p>Office of the Prime Minister</p>
+              <p class="testimonial-author">Yodahe Zemichael</p>
+              <p class="testimonial-role">Office of the Prime Minister</p>
             </div>
           </div>
+    
+          <i onclick="nextSlide()" class="fas fa-chevron-right"> </i>
         </div>
-
         <div class="work-withus-container">
           <div class="image-cont">
             <img src="" alt="" srcset="" />
