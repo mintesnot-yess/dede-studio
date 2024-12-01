@@ -1045,7 +1045,7 @@ footer {
     }
 
     .gallery p {
-        color: #3f3f3f;
+        width: 90%;
         color: #555;
         margin: 5px 0;
         font: 500 1rem / 1.625rem "Open Sans", sans-serif;
