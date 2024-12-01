@@ -25,10 +25,6 @@ barMenuBTN.addEventListener("click", () => {
 
 
 
-function play_vid(id) {
-  let vidId = document.getElementById(id);
-  vidId.play()
-}
 
 
 
@@ -62,15 +58,32 @@ function showSlide(index) {
 }
 
 function nextSlide() {
+
   currentSlide = (currentSlide + 1) % totalSlides;
   showSlide(currentSlide);
 
   prevSlid.style.opacity = '1';
+
+
 }
+setInterval(nextSlide, 4000)
 
 function prevSlide() {
   currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
   showSlide(currentSlide);
 }
 
-setInterval(nextSlide, 4000)
+
+
+function play_vid(id) {
+  let vidId = document.getElementById(id);
+  if (vidId.paused) {
+    vidId.play();
+    newClss.innerHTML = 'sample file'
+
+  } else {
+    vidId.pause();
+  }
+}
+
+
