@@ -43,18 +43,34 @@ document.getElementById("contact-btn").addEventListener('click', function () {
 })
 
 
-let testimonials = document.querySelectorAll(".testimonial-card");
-let currentIndex = 0;
 
-testimonials[currentIndex].classList.add("active");
 
-function nextSlide() {
-  testimonials[currentIndex].classList.remove("active");
 
-  currentIndex = (currentIndex + 1) % testimonials.length;
+var currentSlide = 0;
+var slides = document.querySelectorAll('.gallery');
+var totalSlides = slides.length;
 
-  testimonials[currentIndex].classList.add("active");
+console.log(totalSlides);
+
+var prevSlid = document.querySelector('#returnBtn');
+var nextSlid = document.querySelector('#btnPlus');
+
+function showSlide(index) {
+  slides.forEach((slide) => {
+    slide.style.transform = `translateX(-${index * 100}%)`;
+  });
 }
 
-setInterval(nextSlide, 5000);
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % totalSlides;
+  showSlide(currentSlide);
 
+  prevSlid.style.opacity = '1';
+}
+
+function prevSlide() {
+  currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+  showSlide(currentSlide);
+}
+
+setInterval(nextSlide, 3000)

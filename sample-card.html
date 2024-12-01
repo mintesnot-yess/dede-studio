@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .testimonial-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 90%;
+      margin: auto;
+      margin-bottom: 70px;
+      position: relative;
+      .flex {
+      display: flex;
+      overflow: scroll;
+      width: 650px;
+      height: fit-content;
+      scroll-snap-type: x mandatory;
+      gap: 20px;
+      border-radius: 20px;
+    }
+
+    .flex::-webkit-scrollbar {
+      display: none;
+    }
+
+    .gallery {
+       scroll-snap-align: start;
+      flex: none;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 650px;
+      width: 100%;
+      border-radius: 20px;
+      transform: translateX(0);
+      transition: all 0.5s;
+    }
+
+    .gallery img {
+      border-radius: 50%;
+      object-fit: cover;
+      width: 150px;
+      height: 150px;
+    }
+
+    .gallery h1 {
+      color: #3f3f3f;
+      font-size: 2rem;
+
+
+    }
+
+    .testimonial-author {
+      font: 400 1.5rem / 1.625rem "Open Sans", sans-serif;
+      color: #333;
+    }
+
+    .testimonial-role {
+      color: #777;
+      font: 100 1.4rem / 1.625rem "Open Sans", sans-serif;
+
+    }
+
+    .gallery p {
+      color: #3f3f3f;
+      text-align: center;
+      color: #555;
+      margin: 5px 0;
+      font: 500 1rem / 1.625rem "Open Sans", sans-serif;
+    }
+
+    .btn {
+      width: 50px;
+      height: 50px;
+      background-color: rgba(241, 241, 241, 0.322);
+      border: none;
+      border-radius: 25px;
+      transition: 0.5s;
+      cursor: pointer;
+      backdrop-filter: blur(50px);
+      color: rgb(63, 41, 0);
+
+      &:hover {
+        background-color: rgba(224, 224, 224, 0.945);
+
+      }
+    }
+    }
+
+ 
+  </style>
+</head>
+
+<body>
+
+  <div class="testimonial-container">
+    <button onclick="prevSlide()" style="opacity: 1;" id="returnBtn" class="btn"> &#10094</button>
+    <div class="flex">
+      <div class="gallery">
+        <img src="assets/images/beminat.jpg" class="card-animation" />
+        <p>
+          “Dede is a fantastic art studio to work with. They have great
+          attitude and their work is fun as well as thoughtful.”
+        </p>
+          <h1 class="testimonial-author">Bemnet Yemesgen</h1>
+          <span class="testimonial-role">Girl Effect, Brand Director</p>
+      </div>
+
+      <div class="gallery">
+        <img src="assets/images/Yves.jpg" class="card-animation" alt="" />
+        <p> “Looking to make a set of posters for farmers’ training, Dede
+          Studio has not been only a very good graphic designer, but also
+          an advisor. The drawings realized, the design, the follow up,
+          everything was very professional. It was a fruitful
+          collaboration and the farmers’ feedbacks have been very positive
+          ! ”</span>
+          <h1 class="testimonial-author">Yves de Saint Priest</h1>
+          <span class="testimonial-role">Barley Expert – Boortmalt Ethiopia</span>
+      </div>
+
+      <div class="gallery">
+        <img src="assets/images/Yodahe.jpg" class="card-animation" alt="" />
+        <p class="testimonial-text">
+          “We have had the pleasure of working with Dede studios on a
+          couple of projects. We had hard deadlines and through their
+          day-and-night dedicated approach, we were able to receive a
+          first-class work from Ded”
+        </p>
+        <h1 class="testimonial-author">Yodahe Zemichael</h1>
+        <span class="testimonial-role">Office of the Prime Minister</span>
+      </div>
+
+
+
+    </div>
+    <button onclick="nextSlide()" id="btnPlus" class="btn"> &#10095</button>
+
+  </div>
+</body>
+<script>
+
+var currentSlide = 0;
+var slides = document.querySelectorAll('.gallery');
+var totalSlides = slides.length;
+
+console.log(totalSlides);
+
+var prevSlid = document.querySelector('#returnBtn');
+var nextSlid = document.querySelector('#btnPlus');
+
+function showSlide(index) {
+    slides.forEach((slide) => {
+        slide.style.transform = `translateX(-${index * 100}%)`;
+    });
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    showSlide(currentSlide);
+
+    prevSlid.style.opacity = '1';
+}
+
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    showSlide(currentSlide);
+}
+
+
+</script>
+
+</html>
